@@ -1,6 +1,17 @@
-<div id='container'>
-<!-- Your code here -->
+<div  id='container' >
 
+<!-- Your code here -->
+<form name="urlInput">
+  <input ng-model="url.link" type="url" name="input" required>
+  <button ng-click="addLink(url.link)"> Shorten Link</button>
+  <p>
+    <span class="error" ng-show="urlInput.input.$error.url">
+      Not valid url!</span>
+    <span class="error" ng-show="urlInput.input.$error.required">
+      Url Required!</span>
+  </p>
+
+</form>
 </div>
 
 

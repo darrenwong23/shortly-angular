@@ -4,6 +4,15 @@
     <input type='text'ng-model='user.username'>
     <input type="password" ng-model='user.password'>
     <button>signin</button>
+    <p>
+      <span class="error1" ng-show="signinForm.input.$error.text">
+      Not valid username!</span>
+      <span class="error1" ng-show="signinForm.input.$error.required">
+
+      <span class="error2" ng-show="signinForm.input.$error.password">
+      Not valid password!</span>
+      <span class="error2" ng-show="sign.input.$error.required">
+    </p>
   </form>
   <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
 </div>
