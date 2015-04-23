@@ -1,6 +1,20 @@
 <div id='container'>
   <!-- Your html here -->
-  {{data.links}}
+  <!-- {{data.links}} -->
+  <ul>
+  <input ng-model="query"> </input>
+
+  <li ng-repeat="link in data.links | orderBy:'-visits'| filter:query " >
+    <div> {{link.title}}     {{link.visits}}  </div>
+
+    <div> <a href="/api/links/{{ link.code }}" target="_blank"> {{link.base_url}}/{{link.code}}</a> </div>
+
+  </li>
+  </ul>
+
 </div>
+
+
+
 
 
